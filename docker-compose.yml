@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  backup:
+    image: python
+    volumes:
+      - /root/python-project/python-project:./app
+    command: python3 backup.py
+
+volumes:
+  app:
+    external: true
